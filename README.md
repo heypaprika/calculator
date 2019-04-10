@@ -4,6 +4,8 @@ textinputs - 나영
 
 rectangle - 선목
 
+
+
 trigonometric - ?
 
 arithmetic - 양호
@@ -16,7 +18,12 @@ exponential - 학준
 
 matrix - 원찬
 
+
+
 mode_controller - 이창현
 
 history_controller - 지원
+
+textview_controller
+
 
