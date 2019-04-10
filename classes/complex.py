@@ -1,0 +1,2 @@
+class complex:
+    pass

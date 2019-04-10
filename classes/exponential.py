@@ -1,0 +1,2 @@
+class exponential:
+    pass

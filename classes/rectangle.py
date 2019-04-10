@@ -1,0 +1,2 @@
+class rectangle:
+    pass

@@ -1,0 +1,2 @@
+class textinputs:
+    pass
