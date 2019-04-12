@@ -34,7 +34,8 @@ class history_controller:
         result_value = self._history_list[self._cur_idx].split('=')[-1]
         return result_value
 
-    # 특정 history의 값 리턴
+    # index 받아서 해당 history 리턴
+    # index 안넣어줄 경우 가장 최근에 저장된 history 리턴
     def show_history(self,i=-1):
         if len(self._history_list) == 0:
             return ''
