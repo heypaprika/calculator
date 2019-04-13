@@ -14,6 +14,7 @@ class mode_controller:
     # @mode.setter
     # def mode(self, value):
     #     self.modenum = value
+    #
 
     def on(self, frame):
         print(frame)
@@ -27,3 +28,4 @@ class mode_controller:
         self.off(self.prevframe)
         self.on(self.afterframe)
 
+    # github test
