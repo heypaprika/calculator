@@ -5,8 +5,9 @@ class complex_calu(object):
         # 복소수는 복소수끼리 실수는실수끼리 연산을 기본전제
         #상상코드 두수를 받아서 j를 존재여부로 self.i1을 j없앤 숫자 두개다없으면 i1,2 둘다없으면 r1 r2  한개씩만 있으면 2들은None
         '''
-        self.i1=허수
-        self.i2=허수
+        r1과 i1이 우선인자
+        self.i1=i제외부분
+        self.i2=i제외부분
         self.r1= 실수
         self.r2= 실수
         어떻게??
@@ -41,14 +42,17 @@ class complex_calu(object):
         그러나 계산기를 사용할때는 123i라고 사용 어떻게 ''없이 사용???
         
         '''
-
+    #잘 나뉘어 졌다고 하면???처음꺼 사용가능시
     def add(self):
-        #더하기
+        return r1+r2+(i1+i2)i
     def sub(self):
+        return r1-r2+(i1-i2)i
         #빼기
     def mul(self):
+        return r1*r2+(i1*i2)i
         #곱하기
     def div(self):
+        return r1/r2+(i1/i2)i
         #나누기
 
 class complex_cal(object):
