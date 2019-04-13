@@ -1,3 +1,4 @@
+#기본전제 변수안의 값을 byte단위는 어려우니까 생략 우선 기본값으로 가정후 완료시 
 class complex_calu(object):
     def __init__(self):
         #어떻게 잘 들어와서 나뉜다 나뉘는게 j라는 기본클래스가 구현되어 어려워서 일단 생략
@@ -55,15 +56,19 @@ class complex_calu(object):
         return r1/r2+(i1/i2)i
         #나누기
 
-class complex_cal(object):
+class complex_cal(object):#문자열을 자동으로 연산기호의 것을 재정의한다면??
+    #똑같이 문자열에대한 문제발생
     def __init__(self):
-        self.
-
-    def setdata(self, first, second):
         self.first = first
         self.second = second
 
     def __add__(self,other):
+        '''
+        퍼스트와 세컨드의 데이터타입을 판단 j나 i 있으면(how??)
+        복소수라생각         
+        want
+        복소수와 실수를 다른 파트로 계산하고싶다
+        '''
         return a+b
     def __sub__(self, other):
         return a + b
