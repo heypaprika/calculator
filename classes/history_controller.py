@@ -41,6 +41,8 @@ class history_controller:
             del self.__history_list[idx]
             if idx <= self.cur_idx:
                 self.cur_idx -= 1
+        else:
+            print('IndexError')
 
     # history_list 초기화
     def reset_history(self):
