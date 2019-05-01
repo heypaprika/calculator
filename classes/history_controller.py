@@ -1,5 +1,5 @@
 # 이전 history 보려면 cur_idx 를 이용해서 가장 최근꺼부터 하나씩 이전꺼로 이동
-# history_list 에는 가장 최근에 저장된 것 순으로 저장.
+# __history_list 의 첫번째 index 에는 가장 최근에 저장된 history
 
 class HISTORY:
     def __init__(self, h):
