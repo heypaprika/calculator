@@ -37,7 +37,7 @@ class history_controller:
 
     # index 받아서 유효한 index 면 해당 history 삭제 & cur_idx 업데이트
     def del_history(self, idx):
-        if idx <= len(self.__history_list):
+        if 0 < idx <= len(self.__history_list):
             del self.__history_list[idx]
             if idx <= self.cur_idx:
                 self.cur_idx -= 1
