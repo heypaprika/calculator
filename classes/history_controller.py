@@ -37,12 +37,12 @@ class history_controller:
 
     # index 받아서 유효한 index 면 해당 history 삭제 & cur_idx 업데이트
     def del_history(self, idx):
-        if 0 < idx <= len(self.__history_list):
-            del self.__history_list[idx]
-            if idx <= self.cur_idx:
-                self.cur_idx -= 1
-        else:
-            print('IndexError')
+        if idx < 0 or idx >= len(self.__history_list):
+            error_msg = 'IndexError'
+            return error_msg
+        del self.__history_list[idx]
+        if idx <= self.cur_idx:
+            self.cur_idx -= 1
 
     # history_list 초기화
     def reset_history(self):
@@ -88,18 +88,22 @@ def print_Current_History_Status(x):
 
 if __name__=='__main__':
     ex_l = ['3*4+16=28', '15/3=5', '25//2=12', '1+1=2', '2+3=5', '8-2=6']
+
     # history_controller 객체 선언.
     calc_History = history_controller()
+
     print('\n* history 저장 작동 확인')
     for ex in ex_l:
         calc_History.save_history(ex)
         print_Current_History_Status(calc_History)
+
     print('\n* history move_prev_history & move_next_history 함수 작동 확인')
     for _ in range(3):
         calc_History.move_prev_history()
         print_Current_History_Status(calc_History)
     calc_History.move_next_history()
     print_Current_History_Status(calc_History)
+
     print('\n* history 삭제 작동 확인')
     calc_History.del_history(1)
     print_Current_History_Status(calc_History)
@@ -107,6 +111,7 @@ if __name__=='__main__':
     print_Current_History_Status(calc_History)
     calc_History.del_history(calc_History.cur_idx)
     print_Current_History_Status(calc_History)
+
     print('\n* history 결과값만 가져오기 (cur_idx에 해당하는 history)')
     print(calc_History[calc_History.cur_idx].get_ans_str())
 
